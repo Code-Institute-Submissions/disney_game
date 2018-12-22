@@ -1,17 +1,49 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Disney games</title>
-    </head>
-    <body>
-         <nav>
-        <ul>
-            <li><a href="{{ url_for('index') }}">Home</a></li>
 
-        
-        </ul>
-    </nav>
-        {% block content %} {% endblock %}
+<head>
+    <title>Disney games</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="static/css/style.css" type="text/css" />
+</head>
 
-    </body>
+<body>
+    <div class="row">
+        <div class="col-md-4">
+            <div><img src="static/images/disney_ears.jpg" alt="disney logo"/></div>
+        </div>
+        <div class="col-md-4">
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link active" href="#">Play</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#">Contribute</a></li>
+              <li class="nav-item"><a class="nav-link active" href="#">Subscribe</a></Li>
+            </ul>
+        </div>
+        <div class="col-md-2">
+            <div>Login <i class="fas fa-user"></i> <i class="fas fa-search"></i></div>
+         
+        </div>
+        <div class="col-md-2">
+            <div class="pos-f-t">
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-dark p-4">
+      <h5 class="text-white h4">Collapsed content</h5>
+      <span class="text-muted">Toggleable via the navbar brand.</span>
+    </div>
+  </div>
+  <nav class="navbar navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+</div>
+        </div>
+    </div>
+
+ <div class="fancy-line"></div>
+    {% block content %} {% endblock %}
+
+</body>
+
 </html>

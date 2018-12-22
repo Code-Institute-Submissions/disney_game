@@ -1,0 +1,28 @@
+.fancy-line { 
+    border: 0; 
+    height: 1px;
+    position: relative;
+    margin: 0.5em 0;
+}
+.fancy-line:before {
+    top: -0.5em;
+    height: 1em;
+}
+.fancy-line:after {
+    height: 0.5em;
+    top: calc(-0.5em + 1px);        /* adjusted this */
+}
+
+.fancy-line:before, .fancy-line:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+}
+
+.fancy-line, .fancy-line:before {
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 75%);
+}
+
+body, .fancy-line:after {
+    background: #ffffff;
+}
