@@ -83,7 +83,6 @@ In addition, if it is not obvious, you should also describe how to run your code
 ## Content
 Ouroborus for the fancy line https://stackoverflow.com/questions/40669689/horizontal-line-but-with-the-shadow-at-the-bottom
 
-The text for section Y was copied from the Wikipedia article Z
 Media
 The photos used in this site were obtained from ...
 Acknowledgements
