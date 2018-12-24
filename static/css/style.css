@@ -1,3 +1,33 @@
+
+.logo {
+    padding: 5px;
+    margin-left: 30px;
+}
+
+.nav-link{
+    color:#000000;
+    font-size: 20px;
+}
+
+.user_block{
+    margin-top: 8px;
+       font-size: 20px;
+}
+
+.login {
+    text-decoration: none;
+}
+
+.search{
+    margin-left: 30px;
+}
+
+
+
+
+
+/* borrowed code */
+
 .fancy-line { 
     border: 0; 
     height: 1px;

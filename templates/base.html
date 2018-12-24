@@ -11,7 +11,7 @@
 <body>
     <div class="row">
         <div class="col-md-4">
-            <div><img src="{{ url_for('static', filename='images/disney_ears.jpg') }}" alt="disney logo" /></div>
+            <div class="logo"><img src="{{ url_for('static', filename='images/disney_ears.jpg') }}" alt="disney logo" /></div>
         </div>
         <div class="col-md-4">
             <ul class="nav">
@@ -21,29 +21,38 @@
             </ul>
         </div>
         <div class="col-md-2">
-            <div>Login <i class="fas fa-user"></i> <i class="fas fa-search"></i></div>
+            <div class="user_block"><i class="fas fa-user"></i> <a href="#" class="login">Login</a> <i class="fas fa-search search"></i></div>
 
         </div>
         <div class="col-md-2">
-            <div class="pos-f-t">
-                <div class="collapse" id="navbarToggleExternalContent">
-                    <div class="bg-dark p-4">
-                        <h5 class="text-white h4">Collapsed content</h5>
-                        <span class="text-muted">Toggleable via the navbar brand.</span>
-                    </div>
+            <nav class="navbar  navbar-light ">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                    <a class="navbar-brand" href="#">Game 1</a>
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Game 2 </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Game 3</a>
+                        </li>
+                     
+                    </ul>
+                
                 </div>
-                <nav class="navbar navbar-dark bg-dark">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-                </nav>
-            </div>
+            </nav>
+
         </div>
+
+
     </div>
 
     <div class="fancy-line"></div>
- {% block contect%} {% endblock %}
-
+    {% block contect%} {% endblock %}
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.js"></script>
+    <script type="text/javascript" src="{{ url_for( 'static', filename='js/bootstrap.min.js' ) }} "></script>
 </body>
 
 </html>
