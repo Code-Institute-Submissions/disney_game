@@ -51,6 +51,34 @@
 
     <div class="fancy-line"></div>
     {% block contect%} {% endblock %}
+    
+    <div class="filler"></div>
+ <div class="fancy-line"></div>     
+<footer>
+ 
+ 
+  <div class="row">
+      <div class="col-md-4">a</div>
+     
+      <div class="col-md-4">
+          <div class="row social_media_block">
+              <div class="col-md-2"><img src="{{ url_for('static', filename='images/facebook.png') }}" alt="facebook logo" /></div>
+               <div class="col-md-2"><img src="{{ url_for('static', filename='images/twitter.png') }}" alt="twitter logo" /></div>
+                <div class="col-md-2"><img src="{{ url_for('static', filename='images/youtube.png') }}" alt="youtube logo" /></div>
+          </div>
+          
+          <div class="row">
+              <div class="col-md-2"><img src="{{ url_for('static', filename='images/insta.png') }}" alt="instagram logo" /></div>
+               <div class="col-md-2"><img src="{{ url_for('static', filename='images/google+.png') }}" alt="google+ logo" /></div>
+                <div class="col-md-2"><img src="{{ url_for('static', filename='images/pin.png') }}" alt="pininterest logo" /></div>
+              
+          </div>
+      </div> 
+      <div class="col-md-4">c</div>
+  </div>
+    
+    
+</footer>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.js"></script>
     <script type="text/javascript" src="{{ url_for( 'static', filename='js/bootstrap.min.js' ) }} "></script>
 </body>
