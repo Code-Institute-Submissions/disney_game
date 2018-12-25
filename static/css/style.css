@@ -29,7 +29,19 @@ footer{
     text-align: center;
 }
 
+.social_media_block{
+    padding-top: 100px;
+   
+}
 
+
+.twitter_feed{
+   margin: 20px 0px 0px 25px;
+}
+
+.fb_feed{
+    margin: 25px 0px 0px 0px;
+}
 
 /* borrowed code */
 
@@ -51,7 +63,7 @@ footer{
 .fancy-line:before, .fancy-line:after {
     content: '';
     position: absolute;
-    width: 100%;
+    width: 90%;
 }
 
 .fancy-line, .fancy-line:before {
