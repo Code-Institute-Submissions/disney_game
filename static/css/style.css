@@ -1,97 +1,111 @@
 /*...............nav.............*/
+
 .logo {
     padding: 5px;
     margin-left: 30px;
 }
 
-.nav-link{
-    color:#000000;
+.link-style {
+    color: black;
     font-size: 20px;
 }
 
-.user_block{
-    margin-top: 8px;
-    padding-left:20px;
-       font-size: 20px;
+.user_block {
+    display: inline-block;
+    margin: auto;
+
+    text-align: center;
+
+    font-size: 20px;
 }
 
-.log_link{
-    color:#000000;
+.log_link {
+    color: #000000;
 }
 
 .log_link:hover {
     text-decoration: none;
 }
 
-.menu{
-    margin-left: auto;
-    margin-right: 5px;
+.menu {
+   
+    
+   position: absolute;
+   right: 1px;
+
 }
 
-.search{
+.search {
     margin-left: 30px;
 }
 
 /*..............footer............*/
-footer{
-    height:400px;
-   
+
+footer {
+    height: 400px;
+
     text-align: center;
 }
 
-.social_media_block{
+.social_media_block {
     padding-top: 20px;
-   
+
 }
 
 
-.twitter_feed{
-   margin: 20px 0px 0px 25px;
+.twitter_feed {
+    margin: 20px 0px 0px 25px;
 }
 
-.fb_feed{
+.fb_feed {
     margin: 25px 0px 0px 0px;
 }
 
 /* borrowed code */
 
-.fancy-line { 
-    border: 0; 
+.fancy-line {
+    border: 0;
     height: 1px;
     position: relative;
     margin: 0.5em 0;
 }
+
 .fancy-line:before {
     top: -0.5em;
     height: 1em;
 }
+
 .fancy-line:after {
     height: 0.5em;
-    top: calc(-0.5em + 1px);        /* adjusted this */
+    top: calc(-0.5em + 1px);
+    /* adjusted this */
 }
 
-.fancy-line:before, .fancy-line:after {
+.fancy-line:before,
+.fancy-line:after {
     content: '';
     position: absolute;
-    width: 90%;
+    width: 100%;
 }
 
-.fancy-line, .fancy-line:before {
-    background: radial-gradient(ellipse at center, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 75%);
+.fancy-line,
+.fancy-line:before {
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 75%);
 }
 
-body, .fancy-line:after {
+body,
+.fancy-line:after {
     background: #ffffff;
 }
 
-.filler{
+.filler {
     height: 200px;
 }
 
-.pink{
+.pink {
     background-color: pink;
 }
 
-.green{
+.green {
     background-color: green;
 }
