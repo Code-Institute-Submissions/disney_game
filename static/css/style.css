@@ -11,11 +11,21 @@
 
 .user_block{
     margin-top: 8px;
+    padding-left:20px;
        font-size: 20px;
 }
 
-.login {
+.log_link{
+    color:#000000;
+}
+
+.log_link:hover {
     text-decoration: none;
+}
+
+.menu{
+    margin-left: auto;
+    margin-right: 5px;
 }
 
 .search{
@@ -30,7 +40,7 @@ footer{
 }
 
 .social_media_block{
-    padding-top: 100px;
+    padding-top: 20px;
    
 }
 
@@ -76,4 +86,12 @@ body, .fancy-line:after {
 
 .filler{
     height: 200px;
+}
+
+.pink{
+    background-color: pink;
+}
+
+.green{
+    background-color: green;
 }
