@@ -13,50 +13,42 @@
 </head>
 
 <body>
-    <div class="row pink">
-       
+    <div class="row">
 
-            <div class="col-lg-12 container-fluid ">
-                <nav class="navbar navbar-expand-lg navbar-dark">
-                    <a class="navbar-brand" id="brand" href="index.html"><img src="{{ url_for('static', filename='images/disney_ears.jpg') }}"/></a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+
+        <div class="col-lg-12 container-fluid ">
+            <nav class="navbar navbar-expand-lg navbar-light ">
+                <a class="navbar-brand" href="#"><img src="{{ url_for('static', filename='images/disney_ears.jpg') }}"/></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-                    <div class="collapse navbar-collapse " id="navbarTogglerDemo02">
-                        <ul class="navbar-nav mx-auto mt-2 mt-lg-0 try">
-                            <li class="nav-item active">
-                                <a class="nav-link link-style" href="index.html">Home <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link Link-style" href="groups.html">Group Rides</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link link-style" href="livery.html">Livery</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link link-style " href="lessons.html">Lessons</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link link-style " href="competitions.html">Competitions</a>
-                            </li>
-                            <li class="nav-item d-lg-none">
-                                <a class="nav-link link-style " data-toggle='modal' data-target='#contactModal'>Contact</a>
-                            </li>
-                        </ul>
-                        <span class="navbar-text">
-                        <button type="button" class=" d-none d-lg-block  btn btn-success contact-button" data-toggle="modal" data-target="#contactModal">
-                      Contact Us
-                        </button> <!-- not displayed on xs - m screens as menu is reduced-->
-                    </span>
-                    </div>
-                </nav>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#"><i class="fas fa-home"></i>Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-play"></i>Play</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" aria-disabled="true"><i class="fas fa-plus"></i>Contribute</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" aria-disabled="true"><i class="fas fa-user"></i>Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" aria-disabled="true"><i class="fas fa-search"></i>Search</a>
+                        </li>
+                    </ul>
 
-            </div>
+
+                </div>
+            </nav>
 
         </div>
-    
-    
+    </div>
+
     <div class="fancy-line"></div>
     {% block contect%} {% endblock %}
 

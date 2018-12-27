@@ -1,15 +1,18 @@
 /*...............nav.............*/
-
-.logo {
-    padding: 5px;
-    margin-left: 30px;
+.navbar-nav{
+    width: 100%;
+  
 }
 
-.link-style {
-    color: black;
-    font-size: 20px;
+ul li{
+ margin: auto;
+
+ width: 100%;
 }
 
+i {
+    padding-right: 5px;
+}
 .user_block {
     display: inline-block;
     margin: auto;
@@ -19,12 +22,16 @@
     font-size: 20px;
 }
 
-.log_link {
-    color: #000000;
+.log_link{
+      font-size: 1rem;
+color: #7f7f7f;
 }
+
 
 .log_link:hover {
     text-decoration: none;
+    font-size: 1rem;
+    color: #7f7f7f;
 }
 
 .menu {
@@ -107,5 +114,6 @@ body,
 }
 
 .green {
-    background-color: green;
+background-color:  green;
+color: black;
 }
