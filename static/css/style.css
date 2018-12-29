@@ -46,6 +46,46 @@ color: #7f7f7f;
     margin-left: 30px;
 }
 
+/*..............index............*/
+
+.game-left{
+   margin: 10%;
+   color:white;
+   padding:5px;
+    height: 300px;
+    background-image: url(../images/fishs.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.game-right{
+    
+   margin: 10%;
+   margin-top: 25%;
+  color:white;
+    height: 300px;
+    background-image: url(../images/disney-castle.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+/*..............username............*/
+
+.username{
+
+    margin-top: 20%;
+    
+}
+.form{
+    display: inline-block;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
 /*..............footer............*/
 
 footer {
