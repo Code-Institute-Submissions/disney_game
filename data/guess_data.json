@@ -1,7 +1,12 @@
 [
   {
-        "img_source": "../static/images/guido.jpg'",
+        "img_source": "../static/images/guido.jpg",
         "answer": "Guido"
+        
+    },
+      {
+        "img_source": "../static/images/kevin.jpeg",
+        "answer": "Kevin"
         
     }
 ]

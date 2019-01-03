@@ -1,7 +1,32 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %} {% block content %}
+<div class="container-fluid background">
+    <div class="row">
+        <div class="col-md-4 user_display">
+            <h4><i class="fas fa-user"></i> user: {{username}}</h4>
+        </div>
+    </div>
+     <div class="row">
+        <div class="col-md-5 offset-1 char_image_holder">
+            <img class="char_image" src="{{ guess_data[1]['img_source'] }}" alt="Picture of "/>
+        </div>
+         <div class="col-md-5 offset-1 guess_form">
+            <h3>Name the characther</h3>
+            <form method="POST">
+                <input type="text" name=""/><br>
+                <input type="submit" value="Submit"/>
+            </form>
+        </div>
+    </div>
+     <div class="row">
+        <div class="col-md-5 offset-1 guesses">
+            <h3>guesses</h3>
+            {{ guess_data[1]["answer"] }}
+        </div>
+         <div class="col-md-5 offset-1 score">
+            <h3>score</h3>
+        </div>
+    </div>
+    
+</div>
 
-{% block content %}
-<h1>Game</h1>
-<p>username: {{username}}</p>
-{{ guess_data[0]["answer"] }}
-{% endblock %}
+ {% endblock %}

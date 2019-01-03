@@ -108,6 +108,33 @@ footer {
     margin: 25px 0px 0px 0px;
 }
 
+
+/*..............game page............*/
+
+.user_display{
+    padding:10px;
+}
+
+.background{
+    background-image: url(../images/background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 800px;
+}
+
+.char_image_holder{
+   
+       display: inline-block;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+
+
+
+
 /* borrowed code */
 
 .fancy-line {
