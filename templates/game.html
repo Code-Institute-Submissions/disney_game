@@ -1,32 +1,37 @@
 {% extends 'base.html' %} {% block content %}
 <div class="container-fluid background">
-    <div class="row">
-        <div class="col-md-4 user_display">
-            <h4><i class="fas fa-user"></i> user: {{username}}</h4>
-        </div>
+
+    <div class="col-sm-4 user_display">
+        <p><i class="fas fa-user"></i> user: {{username}} score {{ score }}
+            <p>
+
     </div>
-     <div class="row">
-        <div class="col-md-5 offset-1 char_image_holder">
-            <img class="char_image" src="{{ guess_data[1]['img_source'] }}" alt="Picture of "/>
+
+
+    <div class="row">
+        <div class="col-xs-12 col-md-6 char_image_holder">
+            <img class="char_image" src="{{ guess_data[0]['img_source'] }}" alt="Picture of " />
         </div>
-         <div class="col-md-5 offset-1 guess_form">
-            <h3>Name the characther</h3>
+        <div class="col-xs-12 col-md-6  guess_form">
+            <h2>Name the Character</h2>
             <form method="POST">
-                <input type="text" name=""/><br>
-                <input type="submit" value="Submit"/>
+                <input type="text" name="guess"class="form-control-lg" /><br>
+                <input type="submit" value="Enter Guess" class="btn btn-info submit" />
             </form>
         </div>
     </div>
-     <div class="row">
-        <div class="col-md-5 offset-1 guesses">
-            <h3>guesses</h3>
-            {{ guess_data[1]["answer"] }}
-        </div>
-         <div class="col-md-5 offset-1 score">
-            <h3>score</h3>
-        </div>
-    </div>
-    
-</div>
 
- {% endblock %}
+
+    <div class="row ">
+        <div class="col-md-12">
+            <h3>Incorrect Answers</h3>
+            <ul>
+            {% for guess in guesses %}
+            <li>{{  guess }}</li>
+            {% endfor %}
+            </ul>
+        </div>
+
+    </div>
+</div>
+{% endblock %}
