@@ -1,12 +1,18 @@
 [
   {
         "img_source": "../static/images/guido.jpg",
-        "answer": "Guido"
+        "answer": "guido"
         
     },
       {
         "img_source": "../static/images/kevin.jpeg",
-        "answer": "Kevin"
+        "answer": "kevin"
+        
+    },
+    
+    {
+        "img_source": "../static/images/chip.jpeg",
+        "answer": "chip"
         
     }
 ]
