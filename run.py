@@ -10,6 +10,9 @@ guesses = []
 data = []
 score=0
 image_counter=0
+hint_score=0
+
+
 @app.route("/")
 def index():
         return render_template('index.html')
@@ -26,12 +29,12 @@ def user():
 
 @app.route("/<username>", methods=["GET","POST"])
 
-
-
 def users(username):
    
     global score
     global image_counter
+    global hint_score
+    hint=""
     
     
     with open("data/guess_data.json", "r") as json_data:
@@ -39,19 +42,27 @@ def users(username):
         answer= data[image_counter]['answer'] 
         img_src=data[image_counter]['img_source']
         
-        guess=request.form['guess']
+      
         
         if request.method == "POST":
+          guess=request.form['guess']
           
-            if guess == answer:
-             score+=2
+          if guess == answer:
+             score+=2 - hint_score
              image_counter+=1
              img_src=data[image_counter]['img_source']
              guesses[:]=[]
-            else:    
+             hint_score=0
+             
+          elif guess=="hint":
+              
+           hint=data[image_counter]['hint']
+           hint_score=1
+           
+          else:    
              guesses.append(guess)
             
-    return render_template("game.html", username=username, guess_data=data, score=score, guesses=guesses, img_src=img_src)       
+    return render_template("game.html", username=username, guess_data=data, score=score, guesses=guesses, img_src=img_src, hint=hint)       
         
 app.run(host=os.getenv('IP'), port=int (os.getenv('PORT')), debug=True)
 

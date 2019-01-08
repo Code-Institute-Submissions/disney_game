@@ -1,18 +1,19 @@
 [
   {
         "img_source": "../static/images/guido.jpg",
-        "answer": "guido"
+        "answer": "guido",
+        "hint": "italian tyre mechanic from cars"
         
     },
       {
         "img_source": "../static/images/kevin.jpeg",
-        "answer": "kevin"
-        
+        "answer": "kevin",
+        "hint": "From Up and sounds like bevin"
     },
     
     {
         "img_source": "../static/images/chip.jpeg",
-        "answer": "chip"
-        
+        "answer": "chip",
+         "hint": "Beauty and the beast and the handle is?"
     }
 ]
