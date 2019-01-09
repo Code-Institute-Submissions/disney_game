@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Lora:700');
+
+
+
+h1,h2,h3,h4{
+  font-family: 'Lora', serif;
+}
+
 /*...............nav.............*/
 .navbar-nav{
     width: 100%;
