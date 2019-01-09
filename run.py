@@ -19,6 +19,7 @@ def index():
 
 @app.route("/user",methods=["GET","POST"])
 def user():
+    """set session cookie"""
     if request.method == "POST":
         
         session["username"] = request.form["username"]
@@ -36,14 +37,14 @@ def users(username):
     global hint_score
     hint=""
     
-    
+    """ get quiz data"""
     with open("data/guess_data.json", "r") as json_data:
         data = json.load(json_data)
         answer= data[image_counter]['answer'] 
         img_src=data[image_counter]['img_source']
         
       
-        
+        """ check answers"""
         if request.method == "POST":
           guess=request.form['guess']
           
