@@ -111,7 +111,16 @@ footer {
 
 /*..............game page............*/
 
+.user_display{
+    color:#cccc00;
+    font-weight: 700;
 
+}
+
+.black_font{
+    color: #000000;
+    font-weight: 700;
+}
 
 .background{
     background-image: url(../images/background.jpg);
@@ -119,6 +128,9 @@ footer {
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 800px;
+    width:80%;
+    margin-top:40px;
+    
 }
 
 .char_image_holder{
@@ -135,7 +147,7 @@ text-align: center;
 }
 
 .guess_form h2{
-    color:#993366;
+    color:#26547c;
 }
 
 .guess_form form{
@@ -150,10 +162,22 @@ text-align: center;
 
 }
 
-
-
-.guesses{
+.incorrect-answer{
     text-align: center;
+}
+
+.incorrect-answer h3{
+  color:#ef476f;
+}
+
+.answer_list{
+     font-size: 24px;
+     color:#000000;
+}
+
+.answer_list li {
+     list-style-type: none;
+    
 }
 
 /* borrowed code */

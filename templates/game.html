@@ -2,7 +2,7 @@
 <div class="container-fluid background">
 
     <div class="col-sm-4 user_display">
-        <p><i class="fas fa-user"></i> user: {{username}} score {{ score }}
+        <p><i class="fas fa-user black_font"></i> <i class="black_font"> user:</i> {{username}} <i class="black_font">score:</i> {{ score }}
             <p>
 
     </div>
@@ -26,9 +26,10 @@
 
 
     <div class="row ">
-        <div class="col-md-12">
+      
+        <div class="col-sm-12 incorrect-answer">
             <h3>Incorrect Answers</h3>
-            <ul>
+            <ul class="answer_list">
             {% for guess in guesses %}
             <li>{{  guess }}</li>
             {% endfor %}
