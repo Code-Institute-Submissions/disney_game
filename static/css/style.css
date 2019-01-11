@@ -2,25 +2,30 @@
 
 
 
-h1,h2,h3,h4{
-  font-family: 'Lora', serif;
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Lora', serif;
 }
 
 /*...............nav.............*/
-.navbar-nav{
+
+.navbar-nav {
     width: 100%;
-  
+
 }
 
-ul li{
- margin: auto;
+ul li {
+    margin: auto;
 
- width: 100%;
+    width: 100%;
 }
 
 i {
     padding-right: 5px;
 }
+
 .user_block {
     display: inline-block;
     margin: auto;
@@ -30,9 +35,9 @@ i {
     font-size: 20px;
 }
 
-.log_link{
-      font-size: 1rem;
-color: #7f7f7f;
+.log_link {
+    font-size: 1rem;
+    color: #7f7f7f;
 }
 
 
@@ -43,10 +48,10 @@ color: #7f7f7f;
 }
 
 .menu {
-   
-    
-   position: absolute;
-   right: 1px;
+
+
+    position: absolute;
+    right: 1px;
 
 }
 
@@ -56,22 +61,25 @@ color: #7f7f7f;
 
 /*..............index............*/
 
-.game-left{
-   margin: 10%;
-   color:white;
-   padding:5px;
+.game-left {
+    margin: 10%;
+
+    color: white;
+    padding: 5px;
+    padding-top: 20px;
     height: 300px;
     background-image: url(../images/fishs.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    text-align: center;
 }
 
-.game-right{
-    
-   margin: 10%;
-   margin-top: 25%;
-  color:white;
+.game-right {
+
+    margin: 10%;
+    margin-top: 25%;
+    color: white;
     height: 300px;
     background-image: url(../images/disney-castle.jpeg);
     background-position: center;
@@ -80,14 +88,31 @@ color: #7f7f7f;
 
 }
 
-/*..............username............*/
+.game_divs {
+    text-shadow: 2px 2px #ff0000;
+}
 
-.username{
-
-    margin-top: 20%;
+.game_button {
+    background-color: #ff0000;
+    border-radius: 25px;
+    width: 80px;
+    margin-top: 30%;
     
 }
-.form{
+
+.game_button a {
+    color: #ffffff;
+}
+
+/*..............username............*/
+
+.username {
+
+    margin-top: 20%;
+
+}
+
+.form {
     display: inline-block;
     width: 100%;
     margin: auto;
@@ -119,83 +144,84 @@ footer {
 
 /*..............game page............*/
 
-.user_display{
-    color:#8B0000;
+.user_display {
+    color: #8B0000;
     font-weight: 700;
 
 }
 
-.black_font{
+.black_font {
     color: #000000;
     font-weight: 700;
 }
 
-.background{
+.background {
     background-image: url(../images/background.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 800px;
-    width:80%;
-    margin-top:40px;
-    
+    width: 80%;
+    margin-top: 40px;
+
 }
 
-.char_image_holder{
-   
-       display: inline-block;
+.char_image_holder {
+
+    display: inline-block;
     width: 100%;
     margin: auto;
     text-align: center;
     margin-bottom: 20px;
 }
 
-.guess_form{
-text-align: center;
+.guess_form {
+    text-align: center;
 }
 
-.guess_form h2{
-    color:#26547c;
+.guess_form h2 {
+    color: #26547c;
 }
 
-.guess_form form{
+.guess_form form {
     padding-top: 30px;
-      display: inline-block;
-   width: 100%;
+    display: inline-block;
+    width: 100%;
     margin: auto;
     text-align: center;
 }
-.submit{
-   margin-top:  30px;
+
+.submit {
+    margin-top: 30px;
 
 }
 
-.incorrect-answer{
+.incorrect-answer {
     text-align: center;
 }
 
-.incorrect-answer h3{
-  color:#ef476f;
+.incorrect-answer h3 {
+    color: #ef476f;
 }
 
-.answer_list{
-     font-size: 24px;
-     color:#000000;
+.answer_list {
+    font-size: 24px;
+    color: #000000;
 }
 
 .answer_list li {
-     list-style-type: none;
-    
+    list-style-type: none;
+
 }
 
 .quit {
-   
-    text-align:right;
- }
- 
- #mymodal {
-     text-align: center;
- }
+
+    text-align: right;
+}
+
+#mymodal {
+    text-align: center;
+}
 
 /* borrowed code */
 
@@ -240,15 +266,15 @@ body,
 
 .pink {
     background-color: pink;
-       text-align: center; 
+    text-align: center;
 }
 
 .green {
-background-color:  green;
-  text-align: center;
+    background-color: green;
+    text-align: center;
 }
 
-.blue{
+.blue {
     background-color: blue;
 
 }

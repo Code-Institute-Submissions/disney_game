@@ -82,7 +82,7 @@ In addition, if it is not obvious, you should also describe how to run your code
 # Credits
 ## Content
 Ouroborus for the fancy line https://stackoverflow.com/questions/40669689/horizontal-line-but-with-the-shadow-at-the-bottom
-
+jack for the animation library http://devtuts.online/how-to-use-css3-animate-it/
 tconroy for jquery cookie fix
 
 Media
