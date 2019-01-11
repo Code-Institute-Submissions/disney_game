@@ -188,6 +188,15 @@ text-align: center;
     
 }
 
+.quit {
+   
+    text-align:right;
+ }
+ 
+ #mymodal {
+     text-align: center;
+ }
+
 /* borrowed code */
 
 .fancy-line {

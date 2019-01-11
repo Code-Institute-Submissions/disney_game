@@ -6,7 +6,7 @@ app = Flask(__name__)
 app.secret_key = "randomstring123"
 
 """ variables"""
-guesses = [] 
+guesses=[]
 data = []
 score=0
 image_counter=0
@@ -65,6 +65,13 @@ def users(username):
             
     return render_template("game.html", username=username, guess_data=data, score=score, guesses=guesses, img_src=img_src, hint=hint)       
         
+@app.route('/end_game/<username>')
+    
+def end_game(username):
+    return render_template('end_game.html', score=score, username=username)
+
+
+
 app.run(host=os.getenv('IP'), port=int (os.getenv('PORT')), debug=True)
 
 

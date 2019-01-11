@@ -25,17 +25,17 @@
 
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                     <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#"><i class="fas fa-home"></i>Home <span class="sr-only">(current)</span></a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('index') }}"><i class="fas fa-home"></i>Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fas fa-play"></i>Play</a>
+                            <a class="nav-link" href="{{ url_for('user') }}"><i class="fas fa-play"></i>Play</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#" aria-disabled="true"><i class="fas fa-plus"></i>Contribute</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" aria-disabled="true"><i class="fas fa-user"></i>Login</a>
+                            <a class="nav-link" href="{{ url_for('user') }}" aria-disabled="true"><i class="fas fa-user"></i>Login</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#" aria-disabled="true"><i class="fas fa-search"></i>Search</a>
@@ -73,8 +73,9 @@
 
     </footer>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
     <script type="text/javascript" src="{{ url_for( 'static', filename='js/bootstrap.min.js' ) }} "></script>
-
+<script type="text/javascript" src="{{ url_for('static', filename='js/javascript.js') }}"></script>
 </body>
 
 </html>
