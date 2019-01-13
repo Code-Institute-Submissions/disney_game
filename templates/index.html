@@ -1,53 +1,71 @@
 {% extends 'base.html' %} {% block content %}
 
 
+
+
 <div class="row">
  <div class="col-sm-12 col-md-6">
   <div class="animatedParent">
    <div class="animated bounceInUp box">
-    <div class="game-left">
-     <h4 class="game_divs">Magic Castle Game</h4>
+    <div class="game-1">
+     <h4 class="game_divs">Fish Game</h4>
      <button class="game_button"><a href="{{ url_for('user') }}">PLAY</a></button>
     </div>
    </div>
   </div>
  </div>
 
- <div class="col-sm-12 col-md-6">
+ <div class="col-sm-12 col-md-6 ">
+  
+    <div class="game-2">
+     <h4 class="game_divs">Magic Castle Game</h4>
+     <button class="game_button"><a href="{{ url_for('user') }}">User</a></button>
+    </div>
+   </div>
+   
+  <div class="col-sm-12 col-md-6">
   <div class="animatedParent">
    <div class="animated bounceInUp box">
-    <div class="game-right">
-     <button><a href="{{ url_for('user') }}">User</a></button>
+    <div class="game-3">
+     <h4 class="game_divs">Fish Game</h4>
+     <button class="game_button"><a href="{{ url_for('user') }}">PLAY</a></button>
     </div>
    </div>
   </div>
  </div>
-
- <div class="col-sm-12 col-md-6">
-  <div class="animatedParent">
-   <div class="animated bounceInUp box">
-    <div class="game-left">
-
-     <button><a href="{{ url_for('user') }}">User</a></button>
+  <div class="col-sm-12 col-md-6 ">
+   <div class="game-4">
+     <h4 class="game_divs">Magic Castle Game</h4>
+     <button class="game_button"><a href="{{ url_for('user') }}">User</a></button>
     </div>
    </div>
-  </div>
- </div>
-
- <div class="col-sm-12 col-md-6">
-  <div class="animatedParent">
-   <div class="animated bounceInUp box">
-    <div class="game-right">
-     <button><a href="{{ url_for('user') }}">User</a></button>
-    </div>
-   </div>
-  </div>
- </div>
 
 </div>
 
+<div class="row">
 
+ <div class="col-sm-12 ">
+  <div class="scoreboard">
 
+   <div class="row">
+    <div class="col-sm-12 scoreboard_header">
+     <img src="{{ url_for('static', filename='images/score_board.png') }}"></img>
+    </div>
+   </div>
+
+   <div class="row">
+    <div class="col-sm-12 col-lg-6 offset-lg-3 high_scores">
+     <p> <img src="{{ url_for('static', filename='images/1.png') }}" class="number" /><i class="score_text">Bongos - 20</i> </p>
+     <p> <img src="{{ url_for('static', filename='images/2.png') }}" class="number" /><i class="score_text">dave - 19</i> </p>
+     <p> <img src="{{ url_for('static', filename='images/3.png') }}" class="number" /><i class="score_text">steve - 10</i> </p>
+     <p> <img src="{{ url_for('static', filename='images/4.png') }}" class="number" /><i class="score_text">Bongos - 9</i> </p>
+     <p> <img src="{{ url_for('static', filename='images/5.png') }}" class="number" /><i class="score_text">deefee- 8</i> </p>
+    </div>
+
+   </div>
+  </div>
+ </div>
+</div>
 
 
 

@@ -61,12 +61,12 @@ i {
 
 /*..............index............*/
 
-.game-left {
-    margin: 10%;
 
+
+.game-1 {
+    margin: 10%;
+    height:300px;
     color: white;
-    padding: 5px;
-    padding-top: 20px;
     height: 300px;
     background-image: url(../images/fishs.jpg);
     background-position: center;
@@ -75,17 +75,40 @@ i {
     text-align: center;
 }
 
-.game-right {
-
+.game-2 {
     margin: 10%;
-    margin-top: 25%;
+   margin-top:100px;
     color: white;
     height: 300px;
     background-image: url(../images/disney-castle.jpeg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    text-align: center;
+}
 
+.game-3 {
+    margin: 10%;
+    height:300px;
+    color: white;
+    height: 300px;
+    background-image: url(../images/dis_mix.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.game-4 {
+    margin: 10%;
+   margin-top:100px;
+    color: white;
+    height: 300px;
+    background-image: url(../images/dis_vil.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
 }
 
 .game_divs {
@@ -97,13 +120,43 @@ i {
     border-radius: 25px;
     width: 80px;
     margin-top: 30%;
-    
+
 }
 
 .game_button a {
     color: #ffffff;
 }
 
+.scoreboard {
+    background-image: url(../images/abstract_black.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 800px;
+ width:100%;
+    }
+
+.scoreboard_header img {
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+}
+
+.high_scores{
+    float: left;
+   
+}
+
+.score_text{
+    text-align: left;
+    margin-top: 10px;
+    font-size: 45px;
+    color: white;
+    font-weight: 400;
+   
+}
 /*..............username............*/
 
 .username {
@@ -223,7 +276,29 @@ footer {
     text-align: center;
 }
 
-/* borrowed code */
+/*..............Media Queries............*/
+
+@media (max-width: 576px){
+    .score_text{
+         font-size: 18px;
+        
+    }
+}
+
+@media (min-width: 767px){
+    .score_text {
+        margin-left:100px;
+        
+    }
+}
+
+
+
+
+
+
+/*..............borrowed code............*/
+
 
 .fancy-line {
     border: 0;
