@@ -8,20 +8,20 @@ app.secret_key = "randomstring123"
 """ variables"""
 content=""
 data = []
-score=0
+
 image_counter=0
 hint_score=0
 high_score=[]
 
 @app.route("/")
 def index():
-        return render_template('index.html')
+        return render_template('index.html', high_score=high_score)
 
 @app.route("/user",methods=["GET","POST"])
 def user():
     """set session cookie"""
     if request.method == "POST":
-        
+        session['score']=0
         session["username"] = request.form["username"]
         x=session['username']
        
@@ -35,27 +35,34 @@ def user():
 
 def users(username):
     global  guess
-    global score
+   
     global image_counter
     global hint_score
     global content
     
     hint=""
+
     
     """ get quiz data"""
     with open("data/guess_data.json", "r") as json_data:
         data = json.load(json_data)
         answer= data[image_counter]['answer'] 
         img_src=data[image_counter]['img_source']
-        
+     
       
         """ check answers"""
         if request.method == "POST":
          guess=request.form['guess']
           
          if guess == answer:
+             
+            
+             
+             session['score'] = session.get('score') + 2  # reading and updating session data
+             session.modified = True
+          
+             
              x=session['username']
-             score+=2 - hint_score
              image_counter+=1
              img_src=data[image_counter]['img_source']
              open(x+".txt", "w").close()
@@ -63,7 +70,7 @@ def users(username):
              content=file.read()
              file.close
              hint_score=0
-             
+         
          elif guess =="hint":
               
            hint=data[image_counter]['hint']
@@ -83,17 +90,19 @@ def users(username):
         
 
          
-    return render_template("game.html", username=username, guess_data=data, score=score, guess=content, img_src=img_src, hint=hint)       
+    return render_template("game.html", username=username, guess_data=data,  guess=content, img_src=img_src, hint=hint, score=session['score'])       
         
 @app.route('/end_game/<username>')
     
 def end_game(username):
     global high_score
     x=session['username']
+  
+    high_score.sort()
+ 
     os.remove(x+".txt")
-    
-    session.clear()
-    return render_template('end_game.html', score=score, username=username)
+    session['username'].clear()
+    return render_template('end_game.html', username=username, high_score=high_score)
 
 
 
