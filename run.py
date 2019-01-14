@@ -15,12 +15,13 @@ high_score=[]
 
 @app.route("/")
 def index():
+    text_file = open("scores.txt", "r")
+    lines = text_file.read().split(',')
+    lines.sort(reverse = True)
+    text_file.close()
     
-    file = open ("scores.txt", "r")
-    content=file.read()
-    file.close
-    
-    return render_template('index.html', high_score=content)
+  
+    return render_template('index.html', high_score=lines)
 
 @app.route("/user",methods=["GET","POST"])
 def user():
@@ -104,7 +105,7 @@ def end_game(username):
     x=session['username']
     score=session['score']
     file = open ("scores.txt", "a") # add user score and name to scores.txt
-    file.write(x+"-"+'{}'.format(score))
+    file.write('{}'.format(score)+"-"+x+",")
     file.close
     high_score.append(score)
     high_score.sort()

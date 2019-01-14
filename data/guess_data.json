@@ -15,5 +15,25 @@
         "img_source": "../static/images/chip.jpeg",
         "answer": "chip",
          "hint": "Beauty and the beast and the handle is?"
+    },
+      {
+        "img_source": "../static/images/elena.jpeg",
+        "answer": "elena",
+         "hint": "Disney TV Character?"
+    },
+    {
+        "img_source": "../static/images/mushu.png",
+        "answer": "mushu",
+         "hint": "Mulan"
+    },
+       {
+        "img_source": "../static/images/bruce.jpeg",
+        "answer": "bruce",
+         "hint": "I come from nemo Australia"
+    },
+     {
+        "img_source": "../static/images/carl_fredrickson.jpeg",
+        "answer": "carl fredrickson",
+         "hint": "my second name is fredrickson"
     }
 ]
