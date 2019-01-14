@@ -15,7 +15,12 @@ high_score=[]
 
 @app.route("/")
 def index():
-        return render_template('index.html', high_score=high_score)
+    
+    file = open ("scores.txt", "r")
+    content=file.read()
+    file.close
+    
+    return render_template('index.html', high_score=content)
 
 @app.route("/user",methods=["GET","POST"])
 def user():
@@ -95,14 +100,20 @@ def users(username):
 @app.route('/end_game/<username>')
     
 def end_game(username):
-    global high_score
+    global image_counter
     x=session['username']
-  
+    score=session['score']
+    file = open ("scores.txt", "a") # add user score and name to scores.txt
+    file.write(x+"-"+'{}'.format(score))
+    file.close
+    high_score.append(score)
     high_score.sort()
- 
-    os.remove(x+".txt")
-    session['username'].clear()
-    return render_template('end_game.html', username=username, high_score=high_score)
+    image_counter=0 # reset image array to position 0
+    os.remove(x+".txt") # remove user txt file
+    session.pop('username', None) # delete visits
+    session.pop('score', None) # delete visits
+    
+    return render_template('end_game.html', username=username, high_score=high_score, score=score)
 
 
 
