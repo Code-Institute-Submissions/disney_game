@@ -17,7 +17,7 @@ high_score=[]
 def index():
     text_file = open("scores.txt", "r")
     lines = text_file.read().split(',')
-    lines.sort(reverse = True)
+    lines.sort(key=lambda x:str(x[3:]))
     text_file.close()
     
   

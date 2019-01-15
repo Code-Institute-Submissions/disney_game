@@ -112,8 +112,8 @@
 
 .bounceInRight, .bounceInLeft, .bounceInUp, .bounceInDown{
     opacity:0;
-    -webkit-transform: translateX(200px); 
-    transform: translateX(200px); 
+    -webkit-transform: translateX(-100px); 
+    transform: translateX(-100px); 
 }
 .fadeInRight, .fadeInLeft, .fadeInUp, .fadeInDown{
     opacity:0;

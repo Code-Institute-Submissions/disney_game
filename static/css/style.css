@@ -67,8 +67,8 @@ i {
     margin: 10%;
     height:300px;
     color: white;
-    height: 300px;
-    background-image: url(../images/fishs.jpg);
+  
+    background-image: url(../images/99char.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -92,7 +92,7 @@ i {
     height:300px;
     color: white;
     height: 300px;
-    background-image: url(../images/dis_mix.jpg);
+    background-image: url(../images/angel.jpeg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -156,6 +156,10 @@ i {
     color: white;
     font-weight: 400;
    
+}
+
+.offset{
+    margin-left: 70px;
 }
 /*..............username............*/
 
