@@ -53,3 +53,5 @@ Lines.sort(key=int)
          
     }
 ]
+
+[{"score": 0, "user": "ggg"}, {"score": 12, "user": "ggg"}, {"score": 10, "user": "james"}, {"score": 8, "user": "sally"}, {"score": 8, "user": "sally"}, {"score": 2, "user": "hh"}]

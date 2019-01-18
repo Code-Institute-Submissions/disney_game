@@ -61,14 +61,15 @@ def users(username):
             redirect('/end_game/<username>')
         else:
          answer= data[image_counter]['answer']
+      
          img_src=data[image_counter]['img_source']
      
       
         """ check answers"""
         if request.method == "POST":
-         guess=request.form['guess']
+         guess=request.form['guess'].lower()
           
-         if guess == answer.lower():
+         if guess == answer:
              
              intial_score=2
              score_number=intial_score-hint_score
