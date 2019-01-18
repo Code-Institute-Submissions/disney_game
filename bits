@@ -1,0 +1,55 @@
+ 
+ linesort=sorted( lines, key=lambda a: int(a.split("-")[1]) )
+ 
+ List of strings
+For string in strings
+Length=len(string)
+Remainer=length-7
+
+numbers=a[-2]
+Letters=b-[remainers]
+
+Int_x=int(numbers)
+Newstring=remainer+intx
+Lines.append(Newstring_
+Lines.sort(key=int)
+
+   
+ 
+ lines = [ 'andy-1', 'steve-2', 'barry-11' ]
+ 
+ linesort = lines[0][1:4]
+ return (linesort)
+
+
+  int_x=int(numbers)
+         
+          newstring=letters+int_x
+          lines.append(newstring)
+          lines.sort(key=int)
+          
+          with open('scores.txt') as f:
+   contents = f.readlines()
+   content_ints = [ int(x) for x in content.split('-') ]
+   canpo=sorted(content_ints, key=int, reverse=True)
+   with open('scores.txt') as f:
+     contents = f.readlines()
+    
+  
+    canpo=[1,2,3,4,5]
+    
+     file = open ("data/highscores.json", "a") # add user score and name to scores.txt
+    file.write('{}'.format(score)+"-"+x+",")
+    file.close
+    
+    [    {
+        "user": "james",
+        "score": 10
+         
+    },
+     {
+        "user": "sally",
+        "score": 8
+         
+    }
+]

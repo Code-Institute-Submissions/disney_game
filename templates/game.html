@@ -35,8 +35,14 @@
         <div class="col-sm-12 incorrect-answer">
             <h3>Incorrect Answers</h3>
             
-                
-               {{ guess }}
+               {% for guess in guess %} 
+               
+               <ul class="guesses">
+                   <li>{{ guess }}</li>
+               </ul>
+               
+               
+               {% endfor %}
            
             
         </div>

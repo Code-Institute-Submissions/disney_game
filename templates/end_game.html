@@ -1,4 +1,13 @@
 {% extends 'base.html' %} {% block content %}
-<p>end game</p>
- {{ score }}
+<div class="row">
+    <div class="col-sm-12 end_game">
+       <p> Thanks for playing</p>
+       <p> You scored  {{ score }}</p>
+        <p>View the leader board here</p>
+        <img src="{{ url_for('static', filename='images/mick_wave.png') }}"></img>
+    </div>
+    
+    
+</div>
+
 {% endblock %}

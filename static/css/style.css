@@ -276,9 +276,22 @@ footer {
     text-align: right;
 }
 
+.guesses{
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 400;
+}
+
 #mymodal {
     text-align: center;
 }
+
+/*..............end game............*/
+
+.end_game {
+    text-align: center;
+}
+
 
 /*..............Media Queries............*/
 

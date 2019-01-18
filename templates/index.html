@@ -67,11 +67,17 @@
 
    <div class="row">
     <div class="col-sm-12 col-lg-6 offset-lg-3 high_scores">
-     <p> <img src="{{ url_for('static', filename='images/1.png') }}" class="number" /><i class="score_text">{{ high_score[0] }}</i> </p>
-     <p> <img src="{{ url_for('static', filename='images/2.png') }}" class="number" /><i class="score_text">{{ high_score[1] }}</i> </p>
-     <p> <img src="{{ url_for('static', filename='images/3.png') }}" class="number" /><i class="score_text">{{ high_score[2] }}</i> </p>
-     <p> <img src="{{ url_for('static', filename='images/4.png') }}" class="number" /><i class="score_text">{{ high_score[3] }}</i> </p>
-     <p> <img src="{{ url_for('static', filename='images/5.png') }}" class="number" /><i class="score_text">{{ high_score[4] }}</i> </p>
+     {% for value in high_score %}
+     <ul>
+      <li>{{ value }}</li>
+     </ul>
+     {% endfor %}
+     
+     <p> <img src="{{ url_for('static', filename='images/1.png') }}" class="number" /><i class="score_text"> {{x[0]["user"]}}  {{x[0]["score"]}}</i> </p>
+     <p> <img src="{{ url_for('static', filename='images/2.png') }}" class="number" /><i class="score_text">{{x[1]["user"]}}  {{x[1]["score"]}}</i> </p>
+     <p> <img src="{{ url_for('static', filename='images/3.png') }}" class="number" /><i class="score_text">{{x[2]["user"]}}  {{x[2]["score"]}}</i> </p>
+     <p> <img src="{{ url_for('static', filename='images/4.png') }}" class="number" /><i class="score_text">{{x[3]["user"]}}  {{x[3]["score"]}}</i> </p>
+     <p> <img src="{{ url_for('static', filename='images/5.png') }}" class="number" /><i class="score_text">{{x[4]["user"]}}  {{x[4]["score"]}}</i> </p>
     </div>
 
    </div>

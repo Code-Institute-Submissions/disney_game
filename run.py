@@ -8,20 +8,25 @@ app.secret_key = "randomstring123"
 """ variables"""
 content=""
 data = []
+highscores=[]
+
 
 image_counter=0
 hint_score=0
-high_score=[]
+
 
 @app.route("/")
+
 def index():
-    text_file = open("scores.txt", "r")
-    lines = text_file.read().split(',')
-    lines.sort(key=lambda x:str(x[3:]))
-    text_file.close()
-    
+ global highscores
+ with open('data/highscores.json', 'r') as read_file:
+            highscores = json.load(read_file)  # Read the json file.
+            highscores= sorted(highscores, reverse=True)
+
+           
   
-    return render_template('index.html', high_score=lines)
+
+ return render_template('index.html',x=highscores)
 
 @app.route("/user",methods=["GET","POST"])
 def user():
@@ -52,19 +57,24 @@ def users(username):
     """ get quiz data"""
     with open("data/guess_data.json", "r") as json_data:
         data = json.load(json_data)
-        answer= data[image_counter]['answer'] 
-        img_src=data[image_counter]['img_source']
+        if image_counter==26:
+            redirect('/end_game/<username>')
+        else:
+         answer= data[image_counter]['answer']
+         img_src=data[image_counter]['img_source']
      
       
         """ check answers"""
         if request.method == "POST":
          guess=request.form['guess']
           
-         if guess == answer:
+         if guess == answer.lower():
              
-            
+             intial_score=2
+             score_number=intial_score-hint_score
              
-             session['score'] = session.get('score') + 2  # reading and updating session data
+             
+             session['score'] = session.get('score') + score_number # reading and updating session data
              session.modified = True
           
              
@@ -89,7 +99,7 @@ def users(username):
           file.write("\n"+guess)
           file.close
           file = open (x+".txt", "r")
-          content=file.read()
+          content=file.readlines()
           file.close
           
           
@@ -102,19 +112,29 @@ def users(username):
     
 def end_game(username):
     global image_counter
+    global highscores
     x=session['username']
     score=session['score']
-    file = open ("scores.txt", "a") # add user score and name to scores.txt
-    file.write('{}'.format(score)+"-"+x+",")
-    file.close
-    high_score.append(score)
-    high_score.sort()
+    list_len=len(highscores)
+    del highscores[5:list_len]
+
+    highscores.insert(0,
+        {'user':x,'score':score}
+    )  
+    
+    data = highscores # limit the array to 5?
+    
+    with open('data/highscores.json','w') as f:
+      json.dump(data, f)
+   
+    f.close
+    
     image_counter=0 # reset image array to position 0
     os.remove(x+".txt") # remove user txt file
     session.pop('username', None) # delete visits
     session.pop('score', None) # delete visits
     
-    return render_template('end_game.html', username=username, high_score=high_score, score=score)
+    return render_template('end_game.html', username=username,  score=score)
 
 
 

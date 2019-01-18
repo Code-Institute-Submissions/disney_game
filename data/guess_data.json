@@ -1,39 +1,130 @@
 [
+ 
   {
-        "img_source": "../static/images/guido.jpg",
+        "img_source": "../static/images/char/hamm.png",
+        "answer": "hamm",
+        "hint": "Toy story, think food"
+        
+    },
+ 
+ 
+ 
+  {
+        "img_source": "../static/images/char/guido.png",
         "answer": "guido",
         "hint": "italian tyre mechanic from cars"
         
     },
       {
-        "img_source": "../static/images/kevin.jpeg",
-        "answer": "kevin",
-        "hint": "From Up and sounds like bevin"
+        "img_source": "../static/images/char/buzz.png",
+        "answer": "buzz",
+        "hint": "whats that noise"
     },
     
     {
-        "img_source": "../static/images/chip.jpeg",
-        "answer": "chip",
-         "hint": "Beauty and the beast and the handle is?"
+        "img_source": "../static/images/char/jasmine",
+        "answer": "jasmine",
+         "hint": "That smells nice"
     },
       {
-        "img_source": "../static/images/elena.jpeg",
+        "img_source": "../static/images/char/elena.png",
         "answer": "elena",
-         "hint": "Disney TV Character?"
+         "hint": "Disney TV Character started with E?"
     },
     {
-        "img_source": "../static/images/mushu.png",
-        "answer": "mushu",
-         "hint": "Mulan"
+        "img_source": "../static/images/char/mickey",
+        "answer": "mickey",
+         "hint": "without the mouse"
     },
        {
-        "img_source": "../static/images/bruce.jpeg",
-        "answer": "bruce",
-         "hint": "I come from nemo Australia"
+        "img_source": "../static/images/char/merida.png",
+        "answer": "merida",
+         "hint": "scottish princess who like bear facts"
     },
      {
-        "img_source": "../static/images/carl_fredrickson.jpeg",
-        "answer": "carl fredrickson",
-         "hint": "my second name is fredrickson"
+        "img_source": "../static/images/char/rex.png",
+        "answer": "rex",
+         "hint": "a big dino made small wihtout T"
+    },
+    
+    {
+        "img_source": "../static/images/char/belle.png",
+        "answer": "belle",
+         "hint": "it rings"
+    },
+    {
+        "img_source": "../static/images/char/christopherrob.png",
+        "answer": "christopher robin",
+         "hint": "two names and lives in a 100 acre wood"
+    },
+    {
+        "img_source": "../static/images/char/aurora.png",
+        "answer": "aurora",
+         "hint": "Disney princess who is sleepy"
+    },
+    {
+        "img_source": "../static/images/char/slinky.png",
+        "answer": "slinky",
+         "hint": "sounds like minky"
+    },
+    {
+        "img_source": "../static/images/char/mulan.png",
+        "answer": "mulan",
+         "hint": "princess of a chinese inprired film"
+    },
+    {
+        "img_source": "../static/images/char/sarge.png",
+        "answer": "sarge",
+         "hint": "army cars"
+    },
+    {
+        "img_source": "../static/images/char/pluto.png",
+        "answer": "pluto",
+         "hint": "a planet"
+    },
+    {
+        "img_source": "../static/images/char/rabbit.png",
+        "answer": "rabbit",
+         "hint": "not a hare but a ..."
+    },
+    {
+        "img_source": "../static/images/char/rapunzel.png",
+        "answer": "rapunzel",
+         "hint": "Long hair princess"
+    },
+    {
+        "img_source": "../static/images/char/olaf.png",
+        "answer": "olaf",
+         "hint": "Do you want to build?"
+    },
+    {
+        "img_source": "../static/images/char/silvermist.png",
+        "answer": "rex",
+         "hint": "a less known foggy fairy"
+    },
+    {
+        "img_source": "../static/images/char/pocahontas.png",
+        "answer": "pocahontas",
+         "hint": "try an a instead of an o"
+    },
+    {
+        "img_source": "../static/images/char/ramone.png",
+        "answer": "ramone",
+         "hint": "cool car and name of band"
+    },
+    {
+        "img_source": "../static/images/char/elsa.png",
+        "answer": "elsa",
+         "hint": "cold princess"
+    },
+    {
+        "img_source": "../static/images/char/daisyduck.png",
+        "answer": "daisy duck",
+         "hint": "not donald but d...."
+    },
+    {
+        "img_source": "../static/images/char/cinderella.png",
+        "answer": "cinderella",
+         "hint": "you will go to the ball"
     }
 ]
