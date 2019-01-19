@@ -1,5 +1,6 @@
 import os 
 import json
+
 from flask import Flask, render_template, request, redirect, session, url_for
 
 app = Flask(__name__)
@@ -20,8 +21,8 @@ hint_score=0
 def index():
  global highscores
  with open('data/highscores.json', 'r') as read_file:
-            highscores = json.load(read_file)  # Read the json file.
-            highscores= sorted(highscores, reverse=True)
+            hscores = json.load(read_file)  # Read the json file.
+            highscores = sorted(hscores, reverse=True)
 
            
   
