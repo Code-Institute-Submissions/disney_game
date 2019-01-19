@@ -248,6 +248,10 @@ footer {
     text-align: center;
 }
 
+.guess_form p{
+    margin-top: 10px;
+}
+
 .submit {
     margin-top: 30px;
 
@@ -290,6 +294,9 @@ footer {
 
 .end_game {
     text-align: center;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 
@@ -299,6 +306,10 @@ footer {
     .score_text{
          font-size: 18px;
         
+    }
+    
+    .end_game img{
+        max-width: 570px;
     }
 }
 
@@ -356,17 +367,3 @@ body,
     height: 200px;
 }
 
-.pink {
-    background-color: pink;
-    text-align: center;
-}
-
-.green {
-    background-color: green;
-    text-align: center;
-}
-
-.blue {
-    background-color: blue;
-
-}

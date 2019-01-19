@@ -1,6 +1,6 @@
 import os 
 import json
-from flask import Flask, render_template, request, redirect, session
+from flask import Flask, render_template, request, redirect, session, url_for
 
 app = Flask(__name__)
 app.secret_key = "randomstring123"
@@ -52,18 +52,18 @@ def users(username):
     global content
     
     hint=""
-
+    
     
     """ get quiz data"""
     with open("data/guess_data.json", "r") as json_data:
         data = json.load(json_data)
-        if image_counter==26:
-            redirect('/end_game/<username>')
-        else:
-         answer= data[image_counter]['answer']
-      
-         img_src=data[image_counter]['img_source']
      
+        
+        answer= data[image_counter]['answer']
+      
+        img_src=data[image_counter]['img_source']
+       
+       
       
         """ check answers"""
         if request.method == "POST":
@@ -81,17 +81,23 @@ def users(username):
              
              x=session['username']
              image_counter+=1
-             img_src=data[image_counter]['img_source']
-             open(x+".txt", "w").close()
-             file = open (x+".txt", "r")
-             content=file.read()
-             file.close
-             hint_score=0
+             if image_counter >=24:
+              return redirect(url_for('end_game', username=username))
+             else:
+              img_src=data[image_counter]['img_source']
+              open(x+".txt", "w").close()
+              file = open (x+".txt", "r")
+              content=file.read()
+              file.close
+              hint_score=0
+           
          
          elif guess =="hint":
               
            hint=data[image_counter]['hint']
            hint_score=1
+         
+      
            
          else: 
           x=session['username']

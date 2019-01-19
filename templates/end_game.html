@@ -1,12 +1,12 @@
 {% extends 'base.html' %} {% block content %}
 <div class="row">
     <div class="col-sm-12 end_game">
-       <p> Thanks for playing</p>
-       <p> You scored  {{ score }}</p>
-        <p>View the leader board here</p>
-        <img src="{{ url_for('static', filename='images/mick_wave.png') }}"></img>
+       <p> Thanks for playing!</p>
+       <p> You scored  <i class='user_display'>{{ score }}</i></p>
+        <p></p><a href="{{ url_for('index') }}">View the leader board here</a></p>
+       <img src="{{ url_for('static', filename='images/mick_wave.png') }}" class="d-none d-sm-inline"></img>
     </div>
-    
+ 
     
 </div>
 

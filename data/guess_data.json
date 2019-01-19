@@ -22,7 +22,7 @@
     },
     
     {
-        "img_source": "../static/images/char/jasmine",
+        "img_source": "../static/images/char/jasmine.png",
         "answer": "jasmine",
          "hint": "That smells nice"
     },
@@ -32,7 +32,7 @@
          "hint": "Disney TV Character started with E?"
     },
     {
-        "img_source": "../static/images/char/mickey",
+        "img_source": "../static/images/char/mickey.png",
         "answer": "mickey",
          "hint": "without the mouse"
     },
@@ -99,7 +99,7 @@
     },
     {
         "img_source": "../static/images/char/silvermist.png",
-        "answer": "rex",
+        "answer": "silvermist",
          "hint": "a less known foggy fairy"
     },
     {
