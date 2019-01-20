@@ -9,7 +9,7 @@ app.secret_key = "randomstring123"
 """ variables"""
 content=""
 data = []
-highscores=[]
+highscores={}
 
 
 image_counter=0
