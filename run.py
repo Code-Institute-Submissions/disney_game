@@ -131,7 +131,7 @@ def end_game(username):
     )  
     
     data = highscores # limit the array to 5?
-    
+    data.sort(reverse=True)
     with open('data/highscores.json','w') as f:
       json.dump(data, f)
    
