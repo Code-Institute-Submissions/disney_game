@@ -9,10 +9,10 @@ app.secret_key = "randomstring123"
 """ variables"""
 content=""
 data = []
-highscores={}
+highscores=[]
 
 
-image_counter=0
+
 hint_score=0
 
 
@@ -34,6 +34,7 @@ def user():
     """set session cookie"""
     if request.method == "POST":
         session['score']=0
+        session ['image_counter']=0
         session["username"] = request.form["username"]
         x=session['username']
        
@@ -48,9 +49,10 @@ def user():
 def users(username):
     global  guess
    
-    global image_counter
+ 
     global hint_score
     global content
+    
     
     hint=""
     
@@ -59,10 +61,10 @@ def users(username):
     with open("data/guess_data.json", "r") as json_data:
         data = json.load(json_data)
      
-        
-        answer= data[image_counter]['answer']
+        counter=session['image_counter']
+        answer= data[counter]['answer']
       
-        img_src=data[image_counter]['img_source']
+        img_src=data[counter]['img_source']
        
        
       
@@ -74,18 +76,19 @@ def users(username):
              
              intial_score=2
              score_number=intial_score-hint_score
-             
-             
              session['score'] = session.get('score') + score_number # reading and updating session data
              session.modified = True
-          
              
+             session['image_counter'] = session.get('image_counter') +1 #reading and updating session
+             counter = session['image_counter']
+             session.modified = True
              x=session['username']
-             image_counter+=1
-             if image_counter >=24:
+       
+             if session['image_counter'] >=24:
               return redirect(url_for('end_game', username=username))
              else:
-              img_src=data[image_counter]['img_source']
+                 
+              img_src=data[counter]['img_source']
               open(x+".txt", "w").close()
               file = open (x+".txt", "r")
               content=file.read()
@@ -95,7 +98,7 @@ def users(username):
          
          elif guess =="hint":
               
-           hint=data[image_counter]['hint']
+           hint=data[counter]['hint']
            hint_score=1
          
       
@@ -119,7 +122,7 @@ def users(username):
 @app.route('/end_game/<username>')
     
 def end_game(username):
-    global image_counter
+   
     global highscores
     x=session['username']
     score=session['score']
@@ -140,8 +143,8 @@ def end_game(username):
     image_counter=0 # reset image array to position 0
     os.remove(x+".txt") # remove user txt file
     session.pop('username', None) # delete visits
-    session.pop('score', None) # delete visits
-    
+    session.pop('score', None) # delete score
+    session.pop('image_counter', None) # delete counter
     return render_template('end_game.html', username=username,  score=score)
 
 
