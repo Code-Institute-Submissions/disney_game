@@ -22,7 +22,7 @@ def index():
  global highscores
  with open('data/highscores.json', 'r') as read_file:
             highscores = json.load(read_file)  # Read the json file.
-            highscores.sort(reverse=True)
+           # highscores.sort(reverse=True)
 
            
   
