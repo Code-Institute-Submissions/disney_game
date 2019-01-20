@@ -21,8 +21,8 @@ hint_score=0
 def index():
  global highscores
  with open('data/highscores.json', 'r') as read_file:
-            hscores = json.load(read_file)  # Read the json file.
-            highscores = sorted(hscores, reverse=True)
+            highscores = json.load(read_file)  # Read the json file.
+            highscores.sort(reverse=True)
 
            
   
