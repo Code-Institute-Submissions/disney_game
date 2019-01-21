@@ -23,11 +23,16 @@ def index():
  with open('data/highscores.json', 'r') as read_file:
             highscores = json.load(read_file)  # Read the json file.
            # highscores.sort(reverse=True)
+           
+            newscore=sorted(highscores, key=lambda k: k['score'], reverse=True)
+
 
            
-  
 
- return render_template('index.html',x=highscores)
+
+ return render_template('index.html',x=newscore)
+
+
 
 @app.route("/user",methods=["GET","POST"])
 def user():
