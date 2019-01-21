@@ -6,25 +6,25 @@ The site will be developed in flask. A pssword will not be required to access th
 
 
 ## UX
-The site is aimed at children and is a fun and fairly easy game children can play unsupervised. There is no requirement to login or exchane any personal information. The site should be easy to navigate, bright and blocky design and lotf images. The home page should have animation and movement to help create excitement
+The site is aimed at children and is a fun and fairly easy game children can play unsupervised. There is no requirement to login or exchane any personal information. The site should be easy to navigate, bright and blocky design and lots of images. The home page should have animation and movement to help create excitement
 
 ### User stories
 
-I want to see games available to me to play and be connected with them in minimal clicks on any device type and playing the game with minimal instructions
+-I want to see games available to me to play and be connected with them in minimal clicks on any device type and playing the game with minimal instructions
 
-I an young and may not understand longwords and complicated dialouge
+-I an young and may not understand longwords and complicated dialouge
 
-I want to be able to record my scores and compare my knowledge to other players as well as play at the same time as my friends
+-I want to be able to record my scores and compare my knowledge to other players as well as play at the same time as my friends
 
-I want game play to be quick and able to skip if I am stuck
+-I want game play to be quick and easy to pick up
 
-I want to have my own user name and receive instant feedback on game progress.
+-I want to have my own user name and receive instant feedback on game progress.
 
-I want to be able to quit the game easily
+-I want to be able to quit the game easily
 
-I want to see nice pictures of my favourite disney characters
+-I want to see nice pictures of my favourite disney characters
 
-I want my parents to understand what I am doing
+-I want my parents to understand what I am doing
 
 ### Wire Frames
 Home page - https://app.moqups.com/tidders2000@gmail.com/VL6zsKhB4b/view/page/a95b9e01a
@@ -35,23 +35,47 @@ Game page - https://app.moqups.com/tidders2000@gmail.com/VL6zsKhB4b/view/page/a0
 
 
 ## Features
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
 
-Existing Features
-Feature 1 - allows users X to achieve Y, by having them fill out Z
-...
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
+### Existing Features
+-Index pages allows users to connect to a game of their choice
 
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
+-The index page also displays top score by users
 
-Features Left to Implement
-Another feature idea
-Technologies Used
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
+-On the login page jquery is used to focus the cursor so its easy to type in a user name
 
-JQuery
-The project uses JQuery to simplify DOM manipulation.
-Testing
+-The game pages displays a disney character picking up the src from a json file
+
+-The game page allows users to enter a guess and see instant feedback by increasing score or printing guesses
+
+-Instructions can be accessed from the game play screen
+
+-If users are stuck they can type in hint and get a clue
+
+-When users exit the game their score is captured and added to the high score json. This is trimmed to six entries and written to json. The index page reads the json file, orders the scores and displays on the scoreboard
+
+-Game data should be saved locally to enable simultaneous play
+
+### features to add
+
+-Search to allow searching of the site
+-Allow users to post information and cheats
+-more games to be added
+-Check username form to ensure names are not duplicated during simultaneous play
+-list of active players to be displayed on game screen
+
+
+
+## Technologies Used
+Flask for app development: http://flask.pocoo.org/
+python for game play coding: https://www.python.org/
+JQuery for page interaction: https://jquery.com/
+bootstrap4 for css layout: https://getbootstrap.com/
+CSS animation library: http://devtuts.online/how-to-use-css3-animate-it/
+CSS3 for layout
+HTML 5 for page coding
+
+
+## Testing
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
 Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
@@ -69,23 +93,20 @@ You should also mention in this section any interesting bugs or problems you dis
 
 If this section grows too long, you may want to split it off into a separate file and link to it from here.
 
-Deployment
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
+## Deployment
+The site was developed in clodd 9 using flask and intially tested here. When the site was stable I made a heroku app and published to there. This then showed a problem with the json sort feature. I had to improve the code and sort using a custom function. I also noticed the image counter stored as a variable did not work with multiple players so live code had this stored in a session. Cofig and all other files remained the same between dev and production.
 
 In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
 
-Different values for environment variables (Heroku Config Vars)?
-Different configuration files?
-Separate git branch?
-In addition, if it is not obvious, you should also describe how to run your code locally.
 
-# Credits
-## Content
-Ouroborus for the fancy line https://stackoverflow.com/questions/40669689/horizontal-line-but-with-the-shadow-at-the-bottom
-jack for the animation library http://devtuts.online/how-to-use-css3-animate-it/
-tconroy for jquery cookie fix
+## Credits
+### Content
+Ouroborus for the fancy line:https://stackoverflow.com/questions/40669689/horizontal-line-but-with-the-shadow-at-the-bottom
+jack for the animation library: http://devtuts.online/how-to-use-css3-animate-it/
+alecxe for solving the json sort issue: https://stackoverflow.com/questions/26924812/python-sort-list-of-json-by-value
 
-Media
-The photos used in this site were obtained from ...
-Acknowledgements
-I received inspiration for this project from X
+### Media
+The photos used in this site were obtained from  disney characters https://characters.disney.com/ and various google image searches
+
+#### Acknowledgements
+I received inspiration for this project from swiss air for the simple layout and animation, The actual game idea came from assortment of similar games
