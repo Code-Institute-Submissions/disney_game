@@ -6,6 +6,13 @@ from flask import Flask, render_template, request, redirect, session, url_for
 app = Flask(__name__)
 app.secret_key = "randomstring123"
 
+
+def string():
+   
+    return ("print")
+
+
+
 """ variables"""
 content=""
 data = []
@@ -17,6 +24,10 @@ hint_score=0
 
 
 @app.route("/")
+
+
+
+
 
 def index():
  global highscores
