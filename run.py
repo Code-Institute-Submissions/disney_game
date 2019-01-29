@@ -1,34 +1,16 @@
 import os 
 import json
-
 from flask import Flask, render_template, request, redirect, session, url_for
-
 app = Flask(__name__)
 app.secret_key = "randomstring123"
-
-
-def string():
-   
-    return ("print")
-
-
 
 """ variables"""
 content=""
 data = []
 highscores=[]
-
-
-
 hint_score=0
 
-
 @app.route("/")
-
-
-
-
-
 def index():
  global highscores
  session.pop('username', None) # delete visits
@@ -37,14 +19,7 @@ def index():
            # highscores.sort(reverse=True)
            
             newscore=sorted(highscores, key=lambda k: k['score'], reverse=True)
-
-
-           
-
-
  return render_template('index.html',x=newscore)
-
-
 
 @app.route("/user",methods=["GET","POST"])
 def user():
@@ -65,26 +40,15 @@ def user():
 
 def users(username):
     global  guess
-   
- 
     global hint_score
     global content
-    
-    
     hint=""
-    
-    
     """ get quiz data"""
     with open("data/guess_data.json", "r") as json_data:
         data = json.load(json_data)
-     
         counter=session['image_counter']
         answer= data[counter]['answer']
-      
         img_src=data[counter]['img_source']
-       
-       
-      
         """ check answers"""
         if request.method == "POST":
          guess=request.form['guess'].lower()
@@ -117,12 +81,8 @@ def users(username):
               
            hint=data[counter]['hint']
            hint_score=1
-         
-      
-           
          else: 
           x=session['username']
-          
           file = open (x+".txt", "a")
           file.write("\n"+guess)
           file.close
@@ -130,10 +90,6 @@ def users(username):
           content=file.readlines()
           file.close
           
-          
-        
-
-         
     return render_template("game.html", username=username, guess_data=data,  guess=content, img_src=img_src, hint=hint, score=session['score'])       
         
 @app.route('/end_game/<username>')
@@ -145,7 +101,6 @@ def end_game(username):
     score=session['score']
     list_len=len(highscores)
     del highscores[5:list_len]
-
     highscores.insert(0,
         {'user':x,'score':score}
     )  
@@ -154,10 +109,7 @@ def end_game(username):
    
     with open('data/highscores.json','w') as f:
       json.dump(data, f)
-   
     f.close
-    
-    image_counter=0 # reset image array to position 0
     os.remove(x+".txt") # remove user txt file
     session.pop('username', None) # delete visits
     session.pop('score', None) # delete score
