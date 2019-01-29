@@ -11,6 +11,7 @@ class test(unittest.TestCase):
         self.app = app.test_client()
         # propagate the exceptions to the test client
         self.app.testing = True
+      
     
     def test_home_status_code(self):
         # sends HTTP GET request to the application
@@ -37,8 +38,17 @@ class test(unittest.TestCase):
 
         # assert the status code of the response
         self.assertEqual(result.status_code, 404)
+    
+  
      
     
+    
+    
+  
+    
+        
+        
+   
   
   
 
