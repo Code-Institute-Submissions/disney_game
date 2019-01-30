@@ -13,7 +13,9 @@ hint_score=0
 @app.route("/")
 def index():
  global highscores
- session.pop('username', None) # delete visits
+ session.pop('username', None) # delete previous visits
+ session.pop('image_counter', None) # delete previous counter
+ 
  with open('data/highscores.json', 'r') as read_file:
             highscores = json.load(read_file)  # Read the json file.
            # highscores.sort(reverse=True)

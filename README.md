@@ -76,6 +76,51 @@ HTML 5 for page coding
 
 
 ## Testing
+Basic page template
+Tested links – contribute and search not wired up 
+Media links show as links
+Login goes to login page 
+Click logo to return to home, not working
+X has no impact
+Scoreboard displays in order
+Page is responsive
+
+INdex
+Images good definition
+Login page
+No entry, reverts to home page, add required to html
+Special chars and numbers work
+Responsive
+Back button returns to index fine 
+Cursor in text field, not working on safari ios
+
+Game page
+Cursor in text field, not working on safari ios
+Instructions I does not work on ios
+User name displayed
+Score correct for start, normal and hint
+Close button works to score
+If user clicks x and comes back session is cleared
+All images are displayed
+All images are clean and good def
+Reverts to score page on array number 24 
+X out at random points seems to work ok
+Responsive pushes the x down on small views a line
+Incorrect answers display
+Hint text works
+Leaving and retunring to app causes image counter session bug
+Closing window causes session issue
+Back button works and aloows erturn to session
+Session deleted when accessing score page
+Close x still leaves text file – manual fix at moment
+Scorte page
+Correct score displayed
+Home page link wortks
+Correct scores displayed in correct order
+Txt file delted
+Score file trimmed to 6 entires
+Occasional bug file wiped for score – no fix yet
+
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
 Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
