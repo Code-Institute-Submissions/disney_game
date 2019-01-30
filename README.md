@@ -76,50 +76,59 @@ HTML 5 for page coding
 
 
 ## Testing
-Basic page template
-Tested links – contribute and search not wired up 
-Media links show as links
-Login goes to login page 
-Click logo to return to home, not working
-X has no impact
-Scoreboard displays in order
-Page is responsive
 
-INdex
-Images good definition
-Login page
-No entry, reverts to home page, add required to html
-Special chars and numbers work
-Responsive
-Back button returns to index fine 
-Cursor in text field, not working on safari ios
+I automated some of the route testing using unittest. However as the app is fairly small user testing served a better purpose. The automated tests test the main routes and can be accessed by running test.py from the command line. I still need to learn more about unit test and will be picking this up in the next project which uses a database.
 
-Game page
-Cursor in text field, not working on safari ios
-Instructions I does not work on ios
-User name displayed
-Score correct for start, normal and hint
-Close button works to score
-If user clicks x and comes back session is cleared
-All images are displayed
-All images are clean and good def
-Reverts to score page on array number 24 
-X out at random points seems to work ok
-Responsive pushes the x down on small views a line
-Incorrect answers display
-Hint text works
-Leaving and retunring to app causes image counter session bug
-Closing window causes session issue
-Back button works and aloows erturn to session
-Session deleted when accessing score page
-Close x still leaves text file – manual fix at moment
-Scorte page
-Correct score displayed
-Home page link wortks
-Correct scores displayed in correct order
-Txt file delted
-Score file trimmed to 6 entires
-Occasional bug file wiped for score – no fix yet
+Most of the testing was done by user testing with the app. The following was tested by page:
+
+### Basic page template
+-Tested links – contribute and search not wired up 
+-Media links show as links
+-Login goes to login page 
+-Click logo to return to home, not working
+-closing browser has no impact
+-Scoreboard displays in order
+-Page is responsive
+- search and contribute not hooked up
+
+
+### Index
+- Images good definition
+- Blank links not working or crashing
+
+### Login page
+- No entry of text field, reverts to home page, added required to html
+- Special chars and numbers work
+- Responsive
+- Back button returns to index fine 
+- Cursor in text field, not working on safari ios - no fix yet
+
+### Game page
+- Cursor in text field, not working on safari ios
+- Instructions link does not work on ios - no fix yet
+- User name displayed correctly
+- Score correct for start, normal and hint
+- Close button works to exit to score screen
+- If user clicks x and come back session is cleared
+- All images are displayed from json
+- All images are clean and good def
+- Reverts to score page on array number 24 
+- Close out at random points seems to work ok
+- Responsive pushes the x down on small views a line
+- Incorrect answers display correctly
+- Hint text works
+- Leaving and returning to app causes image counter session bug. Fixed by resetting session on index
+- Back button works and allows return to session
+- Session deleted when accessing score page correctly
+- Close window still leaves text file – manual fix at moment
+
+### Score page
+- Correct score displayed
+- Home page link works
+- Correct scores displayed in correct order
+- Txt file deleted correctly
+- Score file trimmed to 6 entires
+- Occasional bug file wiped for score – no fix yet
 
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
@@ -127,16 +136,9 @@ Whenever it is feasible, prefer to automate your tests, and if you've done so, p
 
 For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
 
-Contact form:
-Go to the "Contact Us" page
-Try to submit the empty form and verify that an error message about the required fields appears
-Try to submit the form with an invalid email address and verify that a relevant error message appears
-Try to submit the form with all inputs valid and verify that a success message appears.
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
 
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
 
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
+
 
 ## Deployment
 The site was developed in clodd 9 using flask and intially tested here. When the site was stable I made a heroku app and published to there. This then showed a problem with the json sort feature. I had to improve the code and sort using a custom function. I also noticed the image counter stored as a variable did not work with multiple players so live code had this stored in a session. Cofig and all other files remained the same between dev and production.
