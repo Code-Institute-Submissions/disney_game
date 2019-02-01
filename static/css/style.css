@@ -26,6 +26,10 @@ i {
     padding-right: 5px;
 }
 
+.navbar-brand{
+    
+    margin-left: 50px;
+}
 .user_block {
     display: inline-block;
     margin: auto;
@@ -56,7 +60,7 @@ i {
 }
 
 .search {
-    margin-left: 30px;
+    margin-left: 60px;
 }
 
 /*..............index............*/
@@ -65,6 +69,7 @@ i {
 
 .game-1 {
     margin: 10%;
+
     height:300px;
     color: white;
   
@@ -78,6 +83,7 @@ i {
 .game-2 {
     margin: 10%;
    margin-top:100px;
+       margin-left: 0px;
     color: white;
     height: 300px;
     background-image: url(../images/dis_princess.jpg);
@@ -102,6 +108,7 @@ i {
 .game-4 {
     margin: 10%;
    margin-top:100px;
+     margin-left: 0px;
     color: white;
     height: 300px;
     background-image: url(../images/dis_vil.jpeg);
@@ -311,6 +318,14 @@ footer {
     .end_game img{
         max-width: 570px;
     }
+    
+    .navbar-brand{
+    
+    margin-left: 10px;
+ }
+.game-4, .game-2{
+     margin-left: 10%;
+ }
 }
 
 @media (min-width: 767px){

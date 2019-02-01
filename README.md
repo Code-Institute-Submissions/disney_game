@@ -67,9 +67,9 @@ Game page - https://app.moqups.com/tidders2000@gmail.com/VL6zsKhB4b/view/page/a0
 
 ## Technologies Used
 Flask for app development: http://flask.pocoo.org/
-python for game play coding: https://www.python.org/
-JQuery for page interaction: https://jquery.com/
-bootstrap4 for css layout: https://getbootstrap.com/
+Python for game play coding: https://www.python.org/
+jQuery for page interaction: https://jquery.com/
+Bootstrap 4 for css layout: https://getbootstrap.com/
 CSS animation library: http://devtuts.online/how-to-use-css3-animate-it/
 CSS3 for layout
 HTML 5 for page coding
@@ -79,13 +79,13 @@ HTML 5 for page coding
 
 I automated some of the route testing using unittest. However as the app is fairly small user testing served a better purpose. The automated tests test the main routes and can be accessed by running test.py from the command line. I still need to learn more about unit test and will be picking this up in the next project which uses a database.
 
-Most of the testing was done by user testing with the app. The following was tested by page:
+Most of the testing was done by user acceptance testing with the app. The following was tested by page:
 
 ### Basic page template
 -Tested links – contribute and search not wired up 
 -Media links show as links
 -Login goes to login page 
--Click logo to return to home, not working
+-Click logo to return to home, not working added link
 -closing browser has no impact
 -Scoreboard displays in order
 -Page is responsive
@@ -130,11 +130,8 @@ Most of the testing was done by user testing with the app. The following was tes
 - Score file trimmed to 6 entires
 - Occasional bug file wiped for score – no fix yet
 
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
-
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
-
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
+### responsive bug
+There seems to be a weird lag that sometimes occur when inspecting different device views in chrome. This cuases the page to not display correctly and not be responsive.Once the scrren is clicked it seems to refresh and resolve. I have tested on a iphone 5c and ipad and it renders fine from the live site with multiple tests.
 
 
 
