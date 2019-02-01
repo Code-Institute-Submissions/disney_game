@@ -208,6 +208,11 @@ footer {
 
 /*..............game page............*/
 
+.fa-info-circle{
+    cursor: pointer;
+}
+
+
 .user_display {
     color: #8B0000;
     font-weight: 700;
